@@ -27,8 +27,8 @@ for line in rel_file:
 
 if found_rel:
 	print('\nASN\t|\tRelationship\n')
-	for ASN in sorted(rels.keys()):
-		print('{}\t|\t{}'.format(ASN, rels[ASN]))
+	for AS in sorted(rels.items(), key = lambda x : (x[1], x[0])):
+		print('{}\t|\t{}'.format(AS[0], AS[1]))
 
 rel_file.close()
 
